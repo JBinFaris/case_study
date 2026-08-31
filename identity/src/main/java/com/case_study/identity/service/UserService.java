@@ -25,7 +25,7 @@ public class UserService {
 
     @Transactional
     public UserRegistrationResponse register(UserRegistrationRequest request){
-        if (ObjectUtils.isEmpty(userRepository.findByEmail(request.getEmail()))) {
+        if (!ObjectUtils.isEmpty(userRepository.findByEmail(request.getEmail()))) {
             throw new EmailAlreadyExistsException(request.getEmail());
         }
 
