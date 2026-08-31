@@ -79,7 +79,7 @@ public class UserServiceTest {
 
         assertThatThrownBy(() -> userService.register(request))
                 .isInstanceOf(EmailAlreadyExistsException.class);
-        
+
         verify(userRepository, never()).save(any(User.class));
         verify(userEventProducer, never()).publish(any(UserRegisteredEvent.class));
 

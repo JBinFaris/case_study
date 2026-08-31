@@ -1,4 +1,4 @@
-package com.case_study.identity.service;
+package com.case_study.identity.consumer;
 
 import com.case_study.identity.dto.UserRegisteredEvent;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +22,7 @@ public class UserEventConsumer {
 
     private void simulateNotificationProcessing(UserRegisteredEvent event) {
         try {
-            // Simulates latency of an external service (e.g. an email provider)
+            // Simulates latency of email sending
             Thread.sleep(1500);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
