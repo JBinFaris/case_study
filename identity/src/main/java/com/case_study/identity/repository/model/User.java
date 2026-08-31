@@ -1,4 +1,4 @@
-package com.case_study.identity.infra.model;
+package com.case_study.identity.repository.model;
 
 import jakarta.persistence.*;
 import lombok.Builder;
@@ -23,5 +23,8 @@ public class User{
 
     @Column(nullable = false, unique = true, length = 255)
     private String email;
+
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private LocalDateTime createdAt;
 
 }

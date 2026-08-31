@@ -1,4 +1,4 @@
-package com.case_study.identity.infra.model;
+package com.case_study.identity.repository.model;
 
 public interface UserRepository {
 

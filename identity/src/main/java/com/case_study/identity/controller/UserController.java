@@ -1,9 +1,9 @@
 package com.case_study.identity.controller;
 
 
-import com.case_study.identity.application.dto.UserRegistrationRequest;
-import com.case_study.identity.application.dto.UserRegistrationResponse;
-import com.case_study.identity.application.service.UserService;
+import com.case_study.identity.dto.UserRegistrationRequest;
+import com.case_study.identity.dto.UserRegistrationResponse;
+import com.case_study.identity.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
