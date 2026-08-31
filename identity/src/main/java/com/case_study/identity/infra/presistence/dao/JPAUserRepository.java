@@ -8,4 +8,8 @@ import org.springframework.data.rest.core.annotation.RestResource;
 @Repository
 @RestResource(exported = false)
 public interface JPAUserRepository extends JpaRepository<User, Long > {
-}
+
+
+    User findByEmail(String email);
+
+    }
