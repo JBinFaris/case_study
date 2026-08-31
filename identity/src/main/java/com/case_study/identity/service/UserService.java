@@ -47,7 +47,13 @@ public class UserService {
                 .build();
         userEventProducer.publish(event);
 
-
+        return UserRegistrationResponse.builder()
+                .id(registredUser.getId())
+                .name(registredUser.getName())
+                .email(registredUser.getEmail())
+                .createdAt(registredUser.getCreatedAt())
+                .status("REGISTERED - notification queued")
+                .build();
 
 
 
